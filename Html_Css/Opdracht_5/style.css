@@ -1,11 +1,11 @@
 :root{
-    --background-color: #4285f4;
+    --background-color: #162d53;
     --background-color-section: #222;
     --background-color-hover: #3367d6;
     --color: rgb(160, 160, 160);
     --font-family: 'Roboto', sans-serif;
     --padding: 10px 20px;
-    --background-color-delete: red;
+    --background-color-delete: rgb(84, 0, 0);
     --background-color-hover-delete: rgb(162, 15, 15);
 }
 
@@ -75,20 +75,20 @@ header nav {
     padding: 0;
     margin: 0;
     width: 15vh;
-    margin-top: 0; /* remove gap */
+    margin-top: 0; 
 
    
 }
 
 .drop-dropdown {
-    top: 0;            /* relative to parent li */
-    left: 100%;        /* appear to the right of parent */
-    margin: 0;         /* no gap */
+    top: 0;           
+    left: 100%;        
+    margin: 0;         
     position: absolute;
 }
 
 .dropdown li {
-    position: relative; /* parent for nested dropdown */
+    position: relative; 
 }
  li:hover > .dropdown{
         display: block;
@@ -114,8 +114,7 @@ header nav {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 400px;
+    width: 40%;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -130,6 +129,11 @@ header nav {
 /* Form groups */
 .form-group {
     margin-bottom: 1.2rem;
+
+}
+
+.form-group input{
+   width: 95%;
 }
 
 .form-group label {
@@ -145,7 +149,6 @@ header nav {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 1rem;
-    transition: border-color 0.3s;
 }
 
 /* Button */
@@ -621,10 +624,11 @@ footer {
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 1rem;
 
   th {
-    background-color: #4285f4;
-    color: white;
+    background-color: #0f203a;
+    color: var(--color);
     padding: 12px;
     text-align: left;
   }
@@ -632,6 +636,8 @@ table {
   td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    background-color: var(--background-color-section);
+    color: var(--color);
     
     & #Delete{
         background-color: var(--background-color-delete);
@@ -670,7 +676,10 @@ table {
   cursor: pointer;
  
 }
-#menu-toggle{
+
+#menu-toggle,
+#dropdown-toggle,
+#drop-dropdown-toggle {
     display: none;
 }
 
@@ -680,20 +689,15 @@ table {
     padding-left: 1rem;
  
 }
-#dropdown-toggle{
-    display: none;
-}
+
 
 .drop-dropdown-toggle {
     display: none;
     flex-direction: column;
-    padding-left: 1rem;
+ 
  
 }
-/* Hide the nested checkbox */
-#drop-dropdown-toggle {
-    display: none;
-}
+
 
 @media all and (max-width: 600px) {
 
@@ -716,66 +720,75 @@ table {
             left: 0;
             width: 90%;
             height: unset;
-            margin: 0
+            margin: 0;
 
-            
+            li {
+                margin: unset;
+            }
         }
     }
 
 
+
+    .form-card {
+        width: unset;
+    }
+
     .menu-toggle {
-        display: block;
-        background-color: var(--background-color-section);
-        color:#ccc;
-        
- 
-    }
-
-    #menu-toggle:checked + .menu-toggle +  ul {
         display: flex;
-        
-    }
-    
-    .dropdown-toggle {
-        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         background-color: var(--background-color-section);
         color:#ccc;
-         cursor: pointer;
-        padding: 0.5rem 1rem; /* bigger click area */
+        height: 81px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
  
     }
 
-       /* Dropdown toggle labels visible on mobile */
-    .dropdown-toggle,
-    .drop-dropdown-toggle {
-        display: inline-block;
-        cursor: pointer;
-        padding: 0.5rem 1rem;
-        color: #ccc;
-    }
-
-    #dropdown-toggle:checked + .dropdown-toggle + .dropdown {
-        display: flex; 
-        flex-direction: column;
-        position: relative;
-    }
-
-    /* Nested dropdown */
-    #drop-dropdown-toggle:checked + .drop-dropdown-toggle + .drop-dropdown {
-        display: flex; 
-        flex-direction: column;
-        position: relative;
-        top: 0;
-        left: 0;
-        margin-left: 1rem; /* optional indent */
-        width: 95%;
-    }
-
-     /* Remove hover effects on mobile */
+    /* Hide the normal desktop hover dropdowns */
     li:hover > .dropdown,
-    li:hover > .drop-dropdown {
+    .dropdown li:hover > .drop-dropdown {
         display: none;
     }
 
+    /* When hamburger is checked, show main menu */
+    #menu-toggle:checked + .menu-toggle + ul {
+        display: flex;
+        flex-direction: column;
+    }
 
+    /* Hide dropdowns by default */
+    .dropdown,
+    .drop-dropdown {
+        display: none;
+        position: relative;
+        width: 100%;
+        background-color: var(--background-color-section);
+    }
+
+    /* Show first-level dropdown when parent is checked */
+    #dropdown-toggle:checked + .dropdown-toggle + .dropdown {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+
+    /* Show nested dropdown only if both parent and nested toggles are checked */
+    #dropdown-toggle:checked + .dropdown-toggle + .dropdown 
+        #drop-dropdown-toggle:checked + .drop-dropdown-toggle + .drop-dropdown {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        position: static;
+    }
+
+    /* Styling for toggle buttons */
+    .dropdown-toggle,
+    .drop-dropdown-toggle {
+        display: inline-block;
+        color:#ccc;
+        padding: 0.5rem;
+    }
 }

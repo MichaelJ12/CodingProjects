@@ -10,11 +10,29 @@
 <body>
     <header class="header">
         <nav>
-            <input type="checkbox" id="menu-toggle">
+           <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-toggle">☰</label>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="Explore.html">Explore</a></li>
+                <li>
+                    <a href="Explore.html">Explore</a>
+                    <input type="checkbox" id="dropdown-toggle">
+                    <label for="dropdown-toggle" class="dropdown-toggle">▼</label>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#">Option 1</a>
+                            <input type="checkbox" id="drop-dropdown-toggle">
+                            <label for="drop-dropdown-toggle" class="drop-dropdown-toggle">▼</label>
+                            <ul class="drop-dropdown">
+                                <li><a href="#">Option 1</a></li>
+                                <li><a href="#">Option 2</a></li>
+                                <li><a href="#">Option 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Option 2</a></li>
+                        <li><a href="#">Option 3</a></li>
+                    </ul>
+                </li>
                 <li><a href="Profile.html">Profile</a></li>
                 <li><a href="Sign_up.html" class="active">Sign in</a></li>
             </ul>
