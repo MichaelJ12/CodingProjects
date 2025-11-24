@@ -38,5 +38,8 @@ print(diana)
 d1 = Knight("Diana", 6, "Sword")
 d2 = Knight("Diana", 6, "Sword")
 
-print(d1 ==  "Not a knight")
+bob = Knight("bob", 2,"sword")
 
+print(bob)
+
+bob.attack()
