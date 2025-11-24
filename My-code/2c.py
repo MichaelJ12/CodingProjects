@@ -13,6 +13,7 @@ class Fleet(object):
     def __init__(self, locations) -> None:
         self.ships = []
         self.locations = locations
+        self.flight_log = []
     
     def add_ship(self, ship) -> None:
         self.ships.append(ship)
@@ -27,9 +28,19 @@ class Fleet(object):
                 if moon is None:
                     ship.destination = planet
                     print(f"ship: {ship.name} is flying to: {ship.destination}")
+                    self.flight_log.append({
+                        "ship": ship.name,
+                        "from": ship.current_location,
+                        "to": ship.destination
+                    })
                 elif moon in self.locations[planet]:
                     ship.destination = (planet, moon)
                     print(f"ship: {ship.name} is flying to: {moon} van {planet}")
+                    self.flight_log.append({
+                        "ship": ship.name,
+                        "from": ship.current_location,
+                        "to": ship.destination
+                    })
                 else:
                     print(f"{moon} is not a valid moon of {planet}")
             
@@ -49,6 +60,11 @@ class Fleet(object):
         for ship in fleet:   
             print(f"  {ship.name}: current_location={ship.current_location}, destination={ship.destination}")
 
+    def print_flight_log(self):
+        print("Flight log:")
+        for flight in self.flight_log:
+            print(f"    {flight['ship']}: from {flight['from']} -> {flight['to']}")
+
     def send_free_ship(self, planet, moon=None) -> None:
         for ship in self.ships:
             if ship.destination == None:
@@ -58,10 +74,20 @@ class Fleet(object):
                     if moon is None:
                         ship.destination = planet
                         print(f"ship: {ship.name} is flying to: {ship.destination}")
+                        self.flight_log.append({
+                        "ship": ship.name,
+                        "from": ship.current_location,
+                        "to": ship.destination
+                        })
                         break
                     elif moon in self.locations[planet]:
                         ship.destination = (planet, moon)
                         print(f"ship: {ship.name} is flying to: {moon} van {planet}")
+                        self.flight_log.append({
+                        "ship": ship.name,
+                        "from": ship.current_location,
+                        "to": ship.destination
+                        })
                         break
                     else:
                         print(f"{moon} is not a valid moon of {planet}")
@@ -122,12 +148,16 @@ if __name__ == '__main__':
     print()
     f.send_free_ship('Uranus')
     f.send_free_ship('Neptunu', 'maan2')
-    
+    print("-" * 40) 
+    f.print_flight_log()
     print("-" * 40) 
 
     f.ship_arrived(s)
 
     print("-" * 40) 
+    f.send_ship(s,'Jupiter')  
+
+    f.print_flight_log()
 
     f.status()
 
