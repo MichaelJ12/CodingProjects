@@ -104,7 +104,6 @@ class Spaceship(object):
         self.current_location = None
         self.destination = None
 
-
     def print(self) -> None:
         print(f"  {self.name}: current_location={self.current_location}, destination={self.destination}")
 
@@ -141,7 +140,7 @@ if __name__ == '__main__':
     f.add_ship(p)
     f.add_ship(r)
 
-    print("-" * 40)
+    print("-" * 41)
 
     f.send_ship(s,'Mercurius')
     f.send_ship(v,'Venus', 'maan1')
