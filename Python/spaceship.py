@@ -157,8 +157,6 @@ if __name__ == '__main__':
     print("-" * 40) 
     f.send_ship(s,'Jupiter')  
 
-    f.print_flight_log()
-
     f.status()
 
 
