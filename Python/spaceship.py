@@ -56,9 +56,8 @@ class Fleet(object):
     def status(self):
         fleet = self.ships
         print(f"fleet status:")
-
-        for ship in fleet:   
-            print(f"  {ship.name}: current_location={ship.current_location}, destination={ship.destination}")
+        for ship in fleet:
+            ship.print()
 
     def print_flight_log(self):
         print("Flight log:")
@@ -105,9 +104,9 @@ class Spaceship(object):
         self.current_location = None
         self.destination = None
 
+    def print(self) -> None:
+        print(f"  {self.name}: current_location={self.current_location}, destination={self.destination}")
 
-    def print(self) -> str:
-        return self.name
 
 
 if __name__ == '__main__':
@@ -141,7 +140,7 @@ if __name__ == '__main__':
     f.add_ship(p)
     f.add_ship(r)
 
-    print("-" * 40)
+    print("-" * 41)
 
     f.send_ship(s,'Mercurius')
     f.send_ship(v,'Venus', 'maan1')
