@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css">
+  <title>Distributie – Koerier</title>
+</head>
+<body>
+
+<header>
+  <h1>Distributie Dashboard – Koerier 1</h1>
+  <span>15 december 2024</span>
+</header>
+
+<main>
+
+  <!-- SCHERM 1: DASHBOARD -->
+  <section class="stats">
+    <div class="stat"><strong>7</strong><span>Totaal</span></div>
+    <div class="stat"><strong>2</strong><span>Toegewezen</span></div>
+    <div class="stat"><strong>2</strong><span>Onderweg</span></div>
+    <div class="stat"><strong>2</strong><span>Afgeleverd</span></div>
+    <div class="stat"><strong>1</strong><span>Retour</span></div>
+    <div class="stat"><strong>3</strong><span>Spoed</span></div>
+  </section>
+
+  <!-- SCHERM 4: FILTERS & PLANNING -->
+  <section class="filters">
+    <select><option>Regio: Alle</option><option>Centrum</option><option>West</option></select>
+    <select><option>Type: Alle</option><option>Normaal</option><option>Spoed</option></select>
+    <select><option>Levermoment: Alle</option><option>Ochtend</option><option>Middag</option></select>
+  </section>
+
+  <!-- SCHERM 2: ORDERSTATUS -->
+  <article class="order spoed">
+    <div class="order-header">
+      <strong>ORD-2024-1523</strong>
+      <span class="badge spoed">Spoed</span>
+    </div>
+    <div class="order-details">
+      Jan Vermeulen – Hoofdstraat 45, Amsterdam<br />
+      Tel: 06-12345678<br />
+      Ochtend – Regio Centrum
+    </div>
+    <div class="order-actions">
+      <button class="btn-primary">Start levering</button>
+    </div>
+  </article>
+
+  <article class="order afgeleverd">
+    <div class="order-header">
+      <strong>ORD-2024-1524</strong>
+      <span class="badge afgeleverd">Afgeleverd</span>
+    </div>
+    <div class="order-details">
+      Maria de Jong – Kerkstraat 18, Amsterdam<br />
+      Afgeleverd om 14:54
+    </div>
+  </article>
+
+  <article class="order">
+    <div class="order-header">
+      <strong>ORD-2024-1526</strong>
+      <span class="badge retour">Retour</span>
+    </div>
+    <div class="order-details">
+      Sophie Bakker – Vondelstraat 30<br />
+      Reden: klant niet thuis
+    </div>
+    <div class="order-actions">
+      <button class="btn-warning">Nieuwe afspraak</button>
+      <button class="btn-danger">Extra kosten registreren</button>
+    </div>
+  </article>
+
+  <!-- SCHERM 3 & 5: ORDER AFHANDELEN / MAGAZIJN -->
+  <section class="detail">
+    <h2>ORD-2024-1523 – Orderdetails</h2>
+    <p>Ochtend – 15 december 2024<br />Regio: Centrum</p>
+
+    <div class="products">
+      <strong>Verzamelbak BIN-A12 (Rek 3, Niveau 2)</strong>
+      <div class="product"><span>Laptop Dell XPS 13</span><span>✔ Verpakt</span></div>
+      <div class="product"><span>Muis Logitech MX3</span><span>✔ Verpakt</span></div>
+    </div>
+
+    <div class="order-actions" style="margin-top: 1rem;">
+      <button class="btn-success">Markeer als afgeleverd</button>
+      <button class="btn-danger">Retour naar distributiehoek</button>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
