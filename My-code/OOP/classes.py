@@ -1,7 +1,7 @@
-class Knight:  
-    def __init__(self, name, level, weapon):
+class Knight(object):
+    def __init__(self, name, lvl=5, weapon='sword'):
         self.name = name
-        self.lvl = level
+        self.lvl = lvl
         self.weapon = weapon
 
     def __str__(self):
@@ -15,6 +15,7 @@ class Knight:
         
     def level_up(self):
         self.lvl += 1
+        return self.lvl
 
     def change_weapon(self, new_weapon):
         self.weapon = new_weapon
