@@ -4,13 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet" href="style.css">
-  <title>Distributie – Koerier</title>
+  <title>Distributie - Koerier</title>
 </head>
 <body>
 
 <header>
-  <h1>Distributie Dashboard – Koerier 1</h1>
-  <span>15 december 2024</span>
+  <h1>Distributie Dashboard - Koerier 1</h1>
 </header>
 
 <main>
@@ -27,69 +26,91 @@
 
   <!-- SCHERM 4: FILTERS & PLANNING -->
   <section class="filters">
-    <select><option>Regio: Alle</option><option>Centrum</option><option>West</option></select>
+    <select><option>Regio: Alle</option><option>Noord</option><option>Midden</option><option>Zuid</option></select>
     <select><option>Type: Alle</option><option>Normaal</option><option>Spoed</option></select>
-    <select><option>Levermoment: Alle</option><option>Ochtend</option><option>Middag</option></select>
+    <select><option>Levermoment: Alle</option><option>Ochtend (08:00 - 12:00)</option><option>Middag (12:00 - 17:00)</option></select>
   </section>
 
   <!-- SCHERM 2: ORDERSTATUS -->
-  <article class="order spoed">
+  <article class="order onderweg">
     <div class="order-header">
-      <strong>ORD-2024-1523</strong>
-      <span class="badge spoed">Spoed</span>
+      <strong>LEVER-18</strong>
+      <span class="badge onderweg">Onderweg</span>
     </div>
     <div class="order-details">
-      Jan Vermeulen – Hoofdstraat 45, Amsterdam<br />
+      Apotheek Noord - Jan Vermeulen - Hoofdstraat 45 3512 CD, Amsterdam<br />
       Tel: 06-12345678<br />
-      Ochtend – Regio Centrum
+      16-03-2026<br />
+      Ochtend (08:00 - 12:00)
     </div>
     <div class="order-actions">
-      <button class="btn-primary">Start levering</button>
+      <a href="distributie_details.html"><button>Details</button></a>
     </div>
   </article>
 
-  <article class="order afgeleverd">
+  <article class="order spoed">
     <div class="order-header">
-      <strong>ORD-2024-1524</strong>
-      <span class="badge afgeleverd">Afgeleverd</span>
+      <strong>LEVER-18</strong>
+      <span class="badge spoed">Spoed</span>
     </div>
     <div class="order-details">
-      Maria de Jong – Kerkstraat 18, Amsterdam<br />
-      Afgeleverd om 14:54
+      Apotheek Noord - Jan Vermeulen - Hoofdstraat 45 3512 CD, Amsterdam<br />
+      Tel: 06-12345678<br />
+      16-03-2026<br />
+      Ochtend (08:00 - 12:00)
+    </div>
+    <div class="order-actions">
+      <button class="btn-primary">Start levering</button>
+      <a href="distributie_details.html"><button>Details</button></a>
     </div>
   </article>
 
   <article class="order">
     <div class="order-header">
-      <strong>ORD-2024-1526</strong>
+      <strong>LEVER-18</strong>
+      <span class="badge">Normaal</span>
+    </div>
+    <div class="order-details">
+      Apotheek Noord - Jan Vermeulen - Hoofdstraat 45 3512 CD, Amsterdam<br />
+      Tel: 06-12345678<br />
+      16-03-2026<br />
+      Ochtend (08:00 - 12:00)
+    </div>
+    <div class="order-actions">
+      <button class="btn-primary">Start levering</button>
+      <a href="distributie_details.html"><button>Details</button></a>
+    </div>
+  </article>
+
+  <article class="order afgeleverd">
+    <div class="order-header">
+      <strong>LEVER-168</strong>
+      <span class="badge afgeleverd">Afgeleverd</span>
+    </div>
+    <div class="order-details">
+      Apotheek Noord - Jan Vermeulen - Hoofdstraat 45 3512 CD, Amsterdam<br />
+      Tel: 06-12345678<br />
+      16-03-2026<br />
+      Ochtend (08:00 - 12:00)
+    </div>
+  </article>
+
+  <article class="order">
+    <div class="order-header">
+      <strong>LEVER-123</strong>
       <span class="badge retour">Retour</span>
     </div>
     <div class="order-details">
-      Sophie Bakker – Vondelstraat 30<br />
-      Reden: klant niet thuis
+      Apotheek Noord - Jan Vermeulen - Hoofdstraat 45 3512 CD, Amsterdam<br />
+      Tel: 06-12345678<br />
+      16-03-2026<br />
+      Ochtend (08:00 - 12:00)
     </div>
     <div class="order-actions">
       <button class="btn-warning">Nieuwe afspraak</button>
       <button class="btn-danger">Extra kosten registreren</button>
     </div>
   </article>
-
-  <!-- SCHERM 3 & 5: ORDER AFHANDELEN / MAGAZIJN -->
-  <section class="detail">
-    <h2>ORD-2024-1523 – Orderdetails</h2>
-    <p>Ochtend – 15 december 2024<br />Regio: Centrum</p>
-
-    <div class="products">
-      <strong>Verzamelbak BIN-A12 (Rek 3, Niveau 2)</strong>
-      <div class="product"><span>Laptop Dell XPS 13</span><span>✔ Verpakt</span></div>
-      <div class="product"><span>Muis Logitech MX3</span><span>✔ Verpakt</span></div>
-    </div>
-
-    <div class="order-actions" style="margin-top: 1rem;">
-      <button class="btn-success">Markeer als afgeleverd</button>
-      <button class="btn-danger">Retour naar distributiehoek</button>
-    </div>
-  </section>
 
 </main>
 
