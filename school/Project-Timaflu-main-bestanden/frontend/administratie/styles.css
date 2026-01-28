@@ -1,0 +1,223 @@
+/* =========================
+   ALGEMEEN (ALLE SCHERMEN)
+   ========================= */
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar img {
+  width: 150px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+body {
+  margin: 0;
+  background: #f6f7f8;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 24px;
+  background: #f6f7f8;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top h1 {
+  margin: 6px 0;
+  font-size: 22px;
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* =========================
+   SIDEBAR (SCHERM 1 & 2)
+   ========================= */
+
+.sidebar {
+  width: 220px;
+  background: #1aa36f;
+  color: #fff;
+  padding: 20px;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+   KAARTEN / BLOKKEN (GEDEELD)
+   ========================= */
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+/* =========================
+   SCHERM 1 – DASHBOARD
+   ========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card strong {
+  font-size: 24px;
+}
+
+.card.warning {
+  border-left: 5px solid orange;
+}
+
+.card.danger {
+  border-left: 5px solid red;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.filters select {
+  padding: 8px;
+}
+
+/* Tabel (dashboard + factuur) */
+.table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Status badges */
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.betaald {
+  background: #2ecc71;
+}
+
+.open {
+  background: #f1c40f;
+}
+
+.Incasso {
+  background: #e67e22;
+}
+
+.herinnering1 {
+  background: #e74c3c;
+}
+
+.herinnering2 {
+  background: #990f00;
+}
+
+/* =========================
+   SCHERM 2 – FACTUUR
+   ========================= */
+
+.order {
+  font-size: 14px;
+  color: #777;
+}
+
+.factuur-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.totalen {
+  margin-top: 20px;
+}
+
+.totalen .totaal {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.cancel {
+  background: #e0e0e0;
+}
+
+.save {
+  background: #f0f0f0;
+}
+
+.send {
+  background: #1aa36f;
+  color: white;
+}

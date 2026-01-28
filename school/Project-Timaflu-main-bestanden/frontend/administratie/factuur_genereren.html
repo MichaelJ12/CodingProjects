@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factuur aanmaken</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="content">
+
+        <header class="top">
+            <a href="index.html">←</a>
+            <p class="order">Order #1001</p>
+        </header>
+
+        <section class="factuur-layout">
+            <!-- Klantgegevens -->
+            <div class="card">
+                <h3>Klantgegevens</h3>
+                <p><strong>Naam</strong><br>Apotheek Centraal</p>
+                <p><strong>Adres</strong><br>Hoofdstraat 123<br>1234 AB Amsterdam</p>
+                <p><strong>Email</strong><br>info@apotheekcentraal.nl</p>
+            </div>
+
+            <!-- Producten -->
+            <div class="card large">
+                <h3>Geleverde producten</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Aantal</th>
+                            <th>Prijs</th>
+                            <th>Subtotaal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Paracetamol 500mg - 100 stuks</td>
+                            <td>50 doos</td>
+                            <td>€ 0,50</td>
+                            <td>€ 425,00</td>
+                        </tr>
+                        <tr>
+                            <td>Ibuprofen 400mg - 30 tabletten</td>
+                            <td>30 doos</td>
+                            <td>€ 12,80</td>
+                            <td>€ 384,00</td>
+                        </tr>
+                        <tr>
+                            <td>Omeprazol 20mg - 28 capsules</td>
+                            <td>25 doos</td>
+                            <td>€ 18,00</td>
+                            <td>€ 450,00</td>
+                        </tr>
+                        <tr>
+                            <td>Amoxicilline 500mg - 21 capsules</td>
+                            <td>20 doos</td>
+                            <td>€ 15,50</td>
+                            <td>€ 310,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="totalen">
+                    <div><span>Subtotaal</span><span>€ 1.569,00</span></div>
+                    <div><span>Orderkorting (10%)</span><span>- € 156,90</span></div>
+                    <div><span>Klantenkorting (5%)</span><span>- € 78,45</span></div>
+                    <div class="totaal">
+                        <span>Totaal</span><span>€ 1.333,65</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- keuzes -->
+
+        <footer class="actions">
+            <button href="index.html" class="cancel">Annuleren</button>
+            <button class="save">Factuur opslaan</button>
+            <button class="send">Factuur versturen</button>
+        </footer>
+
+    </main>
+
+</body>
+</html>

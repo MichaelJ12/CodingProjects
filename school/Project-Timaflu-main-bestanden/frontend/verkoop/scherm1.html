@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Scherm 1 - Klant selecteren / aanmaken</title>
+  <link rel="stylesheet" href="timaflu.css">
+</head>
+<body>
+
+<header>
+  <h1>Timaflu – Verkoop</h1>
+</header>
+
+<main>
+  <section class="detail">
+    <h2>Klant selecteren / aanmaken</h2>
+
+    <form>
+      <div class="products">
+        <div class="product">
+          <span>Bestaande klant</span>
+          <span>
+            <select name="klant">
+              <option value="">Selecteer klant...</option>
+              <option value="1">Apotheek Centrum</option>
+              <option value="2">Ziekenhuis Noord</option>
+              <option value="3">Groothandel MedSupply</option>
+            </select>
+          </span>
+        </div>
+      </div>
+
+      <div class="order-actions">
+        <a href="scherm2.html"><button class="btn-primary" type="button">Verder</button></a>
+        <a href="scherm0.html"><button class="btn-danger" type="button">Terug</button></a>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Nieuwe klant aanmaken</h2>
+
+      <div class="products">
+        <div class="product"><span>Bedrijfsnaam</span><span><input name="bedrijfsnaam" type="text" placeholder="Apotheek ..." required></span></div>
+        <div class="product"><span>Jaaromzet</span><span><input name="jaaromzet" type="number" placeholder="100000" required></span></div>
+
+        <div class="product"><span>Straat</span><span><input name="straat" type="text" placeholder="Hoofdstraat" required></span></div>
+        <div class="product"><span>Huisnummer</span><span><input name="huisnummer" type="text" placeholder="10" required></span></div>
+        <div class="product"><span>Plaats</span><span><input name="plaats" type="text" placeholder="Amsterdam" required></span></div>
+        <div class="product"><span>Postcode</span><span><input name="postcode" type="text" placeholder="1011AA" required></span></div>
+
+        <div class="product"><span>Contact voornaam</span><span><input name="voornaam" type="text" placeholder="Jan" required></span></div>
+        <div class="product"><span>Contact achternaam</span><span><input name="achternaam" type="text" placeholder="Jansen" required></span></div>
+        <div class="product"><span>Email</span><span><input name="email" type="email" placeholder="contact@..." required></span></div>
+        <div class="product"><span>Telefoon</span><span><input name="telefoon" type="tel" placeholder="0612345678" required></span></div>
+      </div>
+
+      <div class="order-actions">
+        <a href="scherm2.html"><button class="btn-success" type="button">Opslaan & Verder</button></a>
+      </div>
+    </form>
+  </section>
+</main>
+
+</body>
+</html>

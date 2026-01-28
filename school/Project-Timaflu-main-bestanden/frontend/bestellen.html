@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Inkoop – Bestellingen plaatsen</title>
+    <link rel="stylesheet" href="inkoop.css">
+</head>
+<body>
+
+<header>
+    <h1>Timaflu – Inkoop</h1>
+    <p>Bestellingen plaatsen bij leveranciers</p>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="producten.html">Producten & voorraad</a>
+        <a href="bestellen.html">Bestellingen plaatsen</a>
+        <a href="leveranciers.html">Nieuwe leverancier</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="card">
+        <h2>Geselecteerd product</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Omschrijving</th>
+                    <th>Huidige voorraad</th>
+                    <th>Minimum</th>
+                    <th>Status</th>
+                    <th>Benodigd</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="status-onder_minimum">
+                    <td>Ibuprofen 400mg</td>
+                    <td>Pijnstiller – ontstekingsremmend</td>
+                    <td>60</td>
+                    <td>80</td>
+                    <td>ONDER_MINIMUM</td>
+                    <td>40</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- FIXED TABLE BELOW -->
+    <section class="card">
+        <h2>Beschikbare leveranciers</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Leverancier</th>
+                    <th>Prijs per doos (€)</th>
+                    <th>Leverbaarheid</th>
+                    <th>Actie</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="goedkoopst">
+                    <td>PharmaSupply BV</td>
+                    <td>1,10</td>
+                    <td>Leverbaar</td>
+                    <td><button>Bestelling plaatsen</button></td>
+                </tr>
+
+                <tr>
+                    <td>MedicoGroothandel</td>
+                    <td>1,25</td>
+                    <td>Leverbaar</td>
+                    <td><button>Bestelling plaatsen</button></td>
+                </tr>
+
+                <tr class="status-niet_op_voorraad">
+                    <td>HealthPharma</td>
+                    <td>1,05</td>
+                    <td>Niet leverbaar</td>
+                    <td><button disabled>Niet beschikbaar</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="margin-top:8px; font-size:13px; color:#555;">
+            De goedkoopste leverancier is groen gemarkeerd.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Alternatieve producten</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Alternatief product</th>
+                    <th>Omschrijving</th>
+                    <th>Prijs (€)</th>
+                    <th>Leverancier</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Ibuprofen 200mg</td>
+                    <td>Lager gedoseerde variant</td>
+                    <td>0,80</td>
+                    <td>PharmaSupply BV</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>© Timaflu – Afdeling Inkoop</p>
+</footer>
+
+</body>
+</html>

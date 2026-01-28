@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Inkoop – Producten & Voorraad</title>
+    <link rel="stylesheet" href="inkoop.css">
+</head>
+<body>
+
+<header>
+    <h1>Timaflu – Inkoop</h1>
+    <p>Producten & voorraad – Controle en markering voor bestelling</p>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="producten.html">Producten & voorraad</a>
+        <a href="bestellen.html">Bestellingen plaatsen</a>
+        <a href="leveranciers.html">Nieuwe leveranciers</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="card" style="display:flex; gap:25px; align-items:flex-end;">
+        <div>
+            <label>Status</label><br>
+            <select>
+                <option>Alle producten</option>
+                <option>Onder minimumvoorraad</option>
+                <option>Op voorraad</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Productoverzicht</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Omschrijving</th>
+                    <th>Huidige voorraad</th>
+                    <th>Minimum</th>
+                    <th>Status</th>
+                    <th>Actie</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="status-onder_minimum">
+                    <td>Ibuprofen 400mg</td>
+                    <td>Pijnstiller – ontstekingsremmend</td>
+                    <td>60</td>
+                    <td>80</td>
+                    <td>ONDER_MINIMUM</td>
+                    <td><a href="bestellen.html"><button>Markeer</button></a></td>
+                </tr>
+
+                <tr class="status-onder_minimum">
+                    <td>Insuline</td>
+                    <td>Hormooninjectie voor diabetes</td>
+                    <td>10</td>
+                    <td>30</td>
+                    <td>ONDER_MINIMUM</td>
+                    <td><a href="bestellen.html"><button>Markeer</button></a></td>
+                </tr>
+
+                <tr class="status-op_voorraad">
+                    <td>Paracetamol 500mg</td>
+                    <td>Pijnstiller – koortsverlagend</td>
+                    <td>120</td>
+                    <td>50</td>
+                    <td>OP_VOORRAAD</td>
+                    <td>-</td>
+                </tr>
+
+                <tr class="status-op_voorraad">
+                    <td>Amoxicilline</td>
+                    <td>Antibioticum – breed spectrum</td>
+                    <td>200</td>
+                    <td>100</td>
+                    <td>OP_VOORRAAD</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="card">
+        <h2>Gemarkeerde producten voor bestelling</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Benodigd aantal</th>
+                    <th>Reden</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Ibuprofen 400mg</td>
+                    <td>40</td>
+                    <td>Onder minimumvoorraad</td>
+                </tr>
+
+                <tr>
+                    <td>Insuline</td>
+                    <td>20</td>
+                    <td>Onder minimumvoorraad</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>© Timaflu – Afdeling Inkoop</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Acquisitie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo-box"></div>
+  </header>
+
+  <main class="container">
+
+    <section class="cards">
+      <div class="card">
+        <div class="card-title">Nieuwe Leads</div>
+        <div class="card-value">15</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Bezochte Apotheken</div>
+        <div class="card-value">5</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Bestellingen</div>
+        <div class="card-value">20</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Aantal Klanten</div>
+        <div class="card-value">20</div>
+      </div>
+    </section>
+
+    <section class="filters">
+      <input type="text" placeholder="Zoek op naam of contactpersoon...">
+
+      <div class="dropdown">
+        <button class="dropbtn">Alle statussen</button>
+        <div class="dropdown-content">
+          <a href="#">Nieuw</a>
+          <a href="#">Backorder</a>
+          <a href="#">Verstuurd</a>
+          <a href="#">Afgehaakt</a>
+        </div>
+      </div>
+
+      <a href="nieuwe_klant.html" class="nieuwe_klant">Nieuwe Klant</a>
+      <a href="order.html" class="order_pagina">Orders</a>
+    </section>
+
+    <section class="table-box">
+      <table>
+        <thead>
+          <tr>
+            <th>Apotheek</th>
+            <th>Contactpersoon</th>
+            <th>Klant</th>
+            <th>Status</th>
+            <th>Order</th>
+          </tr>
+        </thead>
+        <tbody>
+  <tr>
+    <td>Apotheek Amsterdam<br><span class="sub">amsterdam@apotheek.nl</span></td>
+    <td>Jan de Boer</td>
+    <td>010-1234567</td>
+    <td><span class="status nieuw">Wordt verzameld</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Rotterdam<br><span class="sub">rotterdam@apotheek.nl</span></td>
+    <td>Maria van Dijk</td>
+    <td>010-2345678</td>
+    <td><span class="status backorder">Backorder</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Utrecht<br><span class="sub">utrecht@apotheek.nl</span></td>
+    <td>Pieter Jansen</td>
+    <td>030-3456789</td>
+    <td><span class="status verstuurd">Verstuurd</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Den Haag<br><span class="sub">denhaag@apotheek.nl</span></td>
+    <td>Lisa de Vries</td>
+    <td>070-4567890</td>
+    <td><span class="status verstuurd">Verstuurd</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Eindhoven<br><span class="sub">eindhoven@apotheek.nl</span></td>
+    <td>Mark van Leeuwen</td>
+    <td>040-5678901</td>
+    <td><span class="status verstuurd">Verstuurd</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Groningen<br><span class="sub">groningen@apotheek.nl</span></td>
+    <td>Sanne Bakker</td>
+    <td>050-6789012</td>
+    <td><span class="status nieuw">Wordt verzameld</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Maastricht<br><span class="sub">maastricht@apotheek.nl</span></td>
+    <td>Henk de Jong</td>
+    <td>043-7890123</td>
+    <td><span class="status backorder">Backorder</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Tilburg<br><span class="sub">tilburg@apotheek.nl</span></td>
+    <td>Femke Willems</td>
+    <td>013-8901234</td>
+    <td><span class="status verstuurd">Verstuurd</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Arnhem<br><span class="sub">arnhem@apotheek.nl</span></td>
+    <td>Koen Peters</td>
+    <td>026-9012345</td>
+    <td><span class="status nieuw">Wordt verzameld</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Zwolle<br><span class="sub">zwolle@apotheek.nl</span></td>
+    <td>Anne van Dam</td>
+    <td>038-0123456</td>
+    <td><span class="status backorder">Backorder</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Leeuwarden<br><span class="sub">leeuwarden@apotheek.nl</span></td>
+    <td>Thomas de Graaf</td>
+    <td>058-1234567</td>
+    <td><span class="status verstuurd">Verstuurd</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Haarlem<br><span class="sub">haarlem@apotheek.nl</span></td>
+    <td>Sophie Mulder</td>
+    <td>023-2345678</td>
+    <td><span class="status nieuw">Wordt verzameld</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Breda<br><span class="sub">breda@apotheek.nl</span></td>
+    <td>David Vos</td>
+    <td>076-3456789</td>
+    <td><span class="status backorder">Backorder</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Den Bosch<br><span class="sub">denbosch@apotheek.nl</span></td>
+    <td>Eva Smit</td>
+    <td>073-4567890</td>
+    <td><span class="status verstuurd">Verstuurd</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Amersfoort<br><span class="sub">amersfoort@apotheek.nl</span></td>
+    <td>Rick van der Meer</td>
+    <td>033-5678901</td>
+    <td><span class="status verstuurd">Verstuurd</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Venlo<br><span class="sub">venlo@apotheek.nl</span></td>
+    <td>Lotte de Wit</td>
+    <td>077-6789012</td>
+    <td><span class="status nieuw">Wordt verzameld</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Zwolle Noord<br><span class="sub">zwollenorth@apotheek.nl</span></td>
+    <td>Joris van Lee</td>
+    <td>038-7890123</td>
+    <td><span class="status backorder">Backorder</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Groningen Zuid<br><span class="sub">groningenz@apotheek.nl</span></td>
+    <td>Femke Jacobs</td>
+    <td>050-8901234</td>
+    <td><span class="status verstuurd">Verstuurd</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Eindhoven Oost<br><span class="sub">eindhovenoost@apotheek.nl</span></td>
+    <td>Bas Hendriks</td>
+    <td>040-9012345</td>
+    <td><span class="status verstuurd">Verstuurd</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+  <tr>
+    <td>Apotheek Maastricht Centrum<br><span class="sub">maastrichtcentrum@apotheek.nl</span></td>
+    <td>Claire Visser</td>
+    <td>043-0123456</td>
+    <td><span class="status nieuw">Wordt verzameld</span></td>
+    <td><a href="order.html">Bekijk</a></td>
+  </tr>
+</tbody>
+
+      </table>
+    </section>
+
+  </main>
+
+</body>
+</html>

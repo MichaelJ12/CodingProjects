@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Nieuwe Klant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo-box"></div>
+  </header>
+
+  <main class="container">
+
+    <section class="filters"> <input type="text" placeholder="Zoek op naam, datum of status..."> 
+        <div class="dropdown"> 
+            <button class="dropbtn">Filter</button> 
+            <div class="dropdown-content"> <a href="#">Naam</a> <a href="#">Datum</a> <a href="#">Status</a> 
+            </div> 
+        </div> 
+    </section>
+
+    <h1 class="pagina-titel">Nieuwe Klant aanmaken</h1>
+    <a href="index.html" class="terug-knop">Terug naar overzicht</a>
+
+    <form class="nieuwe-klant-formulier">
+
+      <fieldset class="veld-groep">
+        <label for="apotheek-naam">Naam Apotheek</label>
+        <input type="text" id="apotheek-naam" placeholder="Vul de naam van de apotheek in" required>
+      </fieldset>
+
+      <fieldset class="veld-groep">
+        <label for="contactpersoon">Contactpersoon</label>
+        <input type="text" id="contactpersoon" placeholder="Vul de naam van de contactpersoon in" required>
+      </fieldset>
+
+      <fieldset class="veld-groep">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="email@apotheek.nl" required>
+      </fieldset>
+
+      <fieldset class="veld-groep">
+        <label for="telefoon">Telefoonnummer</label>
+        <input type="tel" id="telefoon" placeholder="000-0000000" required>
+      </fieldset>
+
+      <fieldset class="veld-groep">
+        <label for="adres">Adres</label>
+        <input type="text" id="adres" placeholder="Straatnaam 00, 1234 AB Plaats" required>
+      </fieldset>
+
+
+      <fieldset class="veld-groep">
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="potentieel" selected>Potentieel</option>
+          <option value="actief">Actief (na eerste order)</option>
+        </select>
+      </fieldset>
+
+      <button type="submit" class="knop-nieuwe-klant">Klant aanmaken</button>
+
+    </form>
+
+  </main>
+
+</body>
+</html>

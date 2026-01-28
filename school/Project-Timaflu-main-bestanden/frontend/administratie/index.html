@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administratie Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="layout">
+    <!-- de side bar -->
+     
+    <aside class="sidebar">
+      <img src="https://image2url.com/r2/default/images/1769352997332-60f9ebb6-e99e-4f4a-a23b-d2d2db634895.png"
+        alt="Timaflu logo">
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="factuuroverzicht_per_klant.html">Klanten</a>
+      </nav>
+    </aside>
+
+    <!-- vlakken met informatie erin -->
+
+    <main class="content">
+      <header class="top">
+        <h1>Administratie Dashboard</h1>
+        <span class="date">Woensdag 14 december 2024</span>
+      </header>
+      <section class="cards">
+        <div class="card">
+          <p>Afgeleverde orders</p>
+          <strong>12</strong>
+        </div>
+        <div class="card">
+          <p>Openstaande facturen</p>
+          <strong>23</strong>
+        </div>
+        <div class="card warning">
+          <p>Facturen met herinnering</p>
+          <strong>8</strong>
+        </div>
+        <div class="card danger">
+          <p>Achterstallige betalingen</p>
+          <strong>4</strong>
+        </div>
+      </section>
+
+
+      <section class="filters">
+
+         <!-- afgeleverde orders -->
+
+        <h2>Afgeleverde orders – gereed voor facturatie</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Ordernummer</th>
+              <th>Klant</th>
+              <th>Afleverdatum</th>
+              <th>Status</th>
+              <th>Actie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ORD-1001</td>
+              <td>Apotheek Centraal</td>
+              <td>12-12-2024</td>
+              <td><span class="badge betaald">Afgeleverd</span></td>
+              <td>
+                <a href="factuur_genereren.html" class="save">Factuur aanmaken</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>ORD-1002</td>
+              <td>Ziekenhuis Oost</td>
+              <td>13-12-2024</td>
+              <td><span class="badge betaald">Afgeleverd</span></td>
+              <td>
+                <a href="factuur_genereren.html" class="save">Factuur aanmaken</a>
+              </td>
+            </tr>
+
+                        <tr>
+              <td>ORD-1001</td>
+              <td>Apotheek Centraal</td>
+              <td>12-12-2024</td>
+              <td><span class="badge betaald">Afgeleverd</span></td>
+              <td>
+                <a href="factuur_genereren.html" class="save">Factuur aanmaken</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>ORD-1002</td>
+              <td>Ziekenhuis Oost</td>
+              <td>13-12-2024</td>
+              <td><span class="badge betaald">Afgeleverd</span></td>
+              <td>
+                <a href="factuur_genereren.html" class="save">Factuur aanmaken</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+         <!-- soorteren op bepaalde dingen -->
+
+        <select>
+          <option>Alle statussen</option>
+        </select>
+        <select>
+          <option>Alle datums</option>
+        </select>
+        <select>
+          <option>Alle klanten</option>
+        </select>
+      </section>
+
+       <!-- de sections die er zijn -->
+
+      <table>
+        <thead>
+          <tr>
+            <th>Factuurnummer</th>
+            <th>Klant</th>
+            <th>Factuurdatum</th>
+            <th>Bedrag</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+         <!-- alle fracturen -->
+
+        <tbody>
+          <tr>
+            <td>204001</td>
+            <td>Apotheek Centraal</td>
+            <td>01-12-2024</td>
+            <td>€ 2.575,95</td>
+            <td><span class="badge betaald">Betaald</span></td>
+          </tr>
+
+          <tr>
+            <td>204002</td>
+            <td>Ziekenhuis wouter</td>
+            <td>05-12-2024</td>
+            <td>€ 18.337,20</td>
+            <td><span class="badge open">Open</span></td>
+          </tr>
+
+          <tr>
+            <td>204001</td>
+            <td>Apotheek Centraal</td>
+            <td>01-12-2024</td>
+            <td>€ 2.575,95</td>
+            <td><span class="badge Incasso">Incasso</span></td>
+          </tr>
+
+          <tr>
+            <td>206702</td>
+            <td>Ziekenhuis woww</td>
+            <td>05-12-2024</td>
+            <td>€ 6.767,20</td>
+            <td><span class="badge betaald">Betaald</span></td>
+          </tr>
+
+          <tr>
+            <td>192021</td>
+            <td>Apotheek Centraal</td>
+            <td>01-12-2024</td>
+            <td>€ 2.575,95</td>
+            <td><span class="badge herinnering1">1e Herinnering</span></td>
+          </tr>
+
+          <tr>
+            <td>214002</td>
+            <td>Ziekenhuis Oost</td>
+            <td>05-12-2024</td>
+            <td>€ 8.337,20</td>
+            <td><span class="badge herinnering2">2de Herinnering</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+</html>

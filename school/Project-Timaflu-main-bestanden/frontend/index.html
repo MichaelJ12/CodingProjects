@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Inkoop – Dashboard</title>
+    <link rel="stylesheet" href="inkoop.css">
+</head>
+<body>
+
+<header>
+    <h1>Timaflu – Inkoop</h1>
+    <p>Dashboard – Overzicht van alle inkoopactiviteiten</p>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="producten.html">Producten & voorraad</a>
+        <a href="bestellen.html">Bestellingen plaatsen</a>
+        <a href="leveranciers.html">Nieuwe leveranciers</a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="card" style="text-align:right; font-size:14px;">
+        Vandaag: 14 januari 2026
+    </div>
+
+    <section class="card">
+        <h2>Inkoopstatistieken</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 15px;">
+            <div class="stat-block">
+                <h3>2</h3>
+                <p>Producten onder minimumvoorraad</p>
+            </div>
+
+            <div class="stat-block">
+                <h3>3</h3>
+                <p>Openstaande bestellingen</p>
+            </div>
+
+            <div class="stat-block">
+                <h3>4</h3>
+                <p>Nieuwe interne bestelformulieren</p>
+            </div>
+
+            <div class="stat-block">
+                <h3>5</h3>
+                <p>Actieve leveranciers</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Producten onder minimumvoorraad</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Huidige voorraad</th>
+                    <th>Minimum</th>
+                    <th>Status</th>
+                    <th>Actie</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="status-onder_minimum">
+                    <td>Ibuprofen 400mg</td>
+                    <td>60</td>
+                    <td>80</td>
+                    <td>ONDER_MINIMUM</td>
+                    <td><a href="bestellen.html"><button>Bestellen</button></a></td>
+                </tr>
+
+                <tr class="status-onder_minimum">
+                    <td>Insuline</td>
+                    <td>10</td>
+                    <td>30</td>
+                    <td>ONDER_MINIMUM</td>
+                    <td><a href="bestellen.html"><button>Bestellen</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- FIXED TABLE BELOW -->
+    <section class="card">
+        <h2>Lopende bestellingen bij leveranciers</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Productnaam</th>
+                    <th>Leverancier</th>
+                    <th>Hoeveelheid</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1001</td>
+                    <td>Paracetamol 500mg</td>
+                    <td>PharmaSupply BV</td>
+                    <td>50</td>
+                </tr>
+
+                <tr>
+                    <td>1002</td>
+                    <td>Amoxicilline</td>
+                    <td>MedicoGroothandel</td>
+                    <td>30</td>
+                </tr>
+
+                <tr>
+                    <td>1003</td>
+                    <td>Vitamine D 1000IE</td>
+                    <td>PharmaPlus</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="card">
+        <h2>Snel naar</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 15px;">
+            <a href="producten.html"><button class="btn">Producten & voorraad</button></a>
+            <a href="bestellen.html"><button class="btn">Bestellingen plaatsen</button></a>
+            <a href="leveranciers.html"><button class="btn">Nieuwe leveranciers</button></a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© Timaflu – Afdeling Inkoop</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factuuroverzicht per klant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <img src="https://image2url.com/r2/default/images/1769352997332-60f9ebb6-e99e-4f4a-a23b-d2d2db634895.png" alt="Timaflu logo">
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a class="active">Klanten</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="top">
+        <h1>Factuuroverzicht per klant</h1>
+      </header>
+
+      <!-- Klantenoverzicht -->
+      <div class="card">
+        <h3>Klanten</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Klantnaam</th>
+              <th>Openstaand bedrag</th>
+              <th>Aantal open facturen</th>
+              <th>Status</th>
+              <th>Acties</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Apotheek Centraal</td>
+              <td>€ 0,00</td>
+              <td>0</td>
+              <td><span class="badge betaald">Actief</span></td>
+              <td><button class="save">Klantoverzicht</button></td>
+            </tr>
+            <tr>
+              <td>Ziekenhuis Oost</td>
+              <td>€ 8.387,20</td>
+              <td>1</td>
+              <td><span class="badge betaald">Actief</span></td>
+              <td><button class="save">Klantoverzicht</button></td>
+            </tr>
+            <tr>
+              <td>Huisartsenpraktijk De Linde</td>
+              <td>€ 1.156,80</td>
+              <td>1</td>
+              <td><span class="badge betaald">Actief</span></td>
+              <td><button class="save">Klantoverzicht</button></td>
+            </tr>
+            <tr>
+              <td>Verpleeghuis Zonnehof</td>
+              <td>€ 6.678,90</td>
+              <td>1</td>
+              <td><span class="badge herinnering">Geblokkeerd</span></td>
+              <td><button class="cancel">Blokkade opheffen</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Facturen per klant -->
+      <div class="card">
+        <h3>Facturen – Verpleeghuis Zonnehof</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Factuurnummer</th>
+              <th>Datum</th>
+              <th>Bedrag</th>
+              <th>Status</th>
+              <th>Acties</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>204006</td>
+              <td>20-10-2024</td>
+              <td>€ 6.678,90</td>
+              <td><span class="badge open">Open</span></td>
+              <td>
+                <button class="save">Markeer betaald</button>
+                <button class="cancel">Herinnering</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
