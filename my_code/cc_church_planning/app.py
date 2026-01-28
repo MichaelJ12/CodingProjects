@@ -35,6 +35,7 @@ def print_service(service: list):
 print("Kerkdienst planner - versie 0.1")
 print("-" * 50)
 print("Lijst met werkers:")
+
 for i, u in enumerate(users, start=1):
     print(f"{i}. {u}")
 current_user = int(input(f"kies een werker: "))
