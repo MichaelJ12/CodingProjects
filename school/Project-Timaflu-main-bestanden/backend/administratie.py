@@ -50,7 +50,7 @@ class Betaling:
         
 
 class Order:
-    def __init__(self, order_id: int, totaalbedrag: str, klant_id: int, factuur_id: int):
+    def __init__(self, order_id: int, totaalbedrag: int, klant_id: int, factuur_id: int):
         self.order_id = order_id
         self.totaalbedrag = totaalbedrag
         self.klant_id = klant_id

@@ -1,31 +1,29 @@
-users: list = ['dave', 'bob', 'aels', 'tim', 'diana', 'raiven'] 
+users: list = ['dave', 'bob', 'jan', 'tim', 'diana', 'raiven'] 
 
 unavailable = {
     'dave' : ['01-02-2026']
 }
 
-# services: list = [
-#     {
-#         "name" : "Sunday celabration!",
-#         "date" : "01-02-2026",
-#         'time' : '11:00',
-#         'roles' : [
-#             {'role_name' : 'livestream', 'person' : 'dave'},
-#             {'role_name' : 'camera', 'person' : 'raiven'}
-#         ]
-#     },
-#     {
-#         "name" : "bijbelstudie!",
-#         "date" : "30-01-2026",
-#         'time' : '19:30',
-#         'roles' : [
-#             {'role_name' : 'livestream', 'person' : 'bob'},
-#             {'role_name' : 'camera', 'person' : 'aels'}
-#         ]
-#     }
-# ]
-
-services: list = []
+service: list = [
+    {
+        "name" : "Sunday celabration!",
+        "date" : "01-02-2026",
+        'time' : '11:00',
+        'roles' : [
+            {'role_name' : 'livestream', 'person' : 'dave'},
+            {'role_name' : 'camera', 'person' : 'raiven'}
+        ]
+    },
+    {
+        "name" : "bijbelstudie!",
+        "date" : "30-01-2026",
+        'time' : '19:30',
+        'roles' : [
+            {'role_name' : 'livestream', 'person' : 'bob'},
+            {'role_name' : 'camera', 'person' : 'aels'}
+        ]
+    }
+]
 
 def create_service():
     while True:
