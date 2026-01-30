@@ -1,4 +1,4 @@
-users: list = ['dave', 'bob', 'aels', 'tim', 'diana', 'raiven'] 
+users: list = ['dave', 'bob', 'jan', 'tim', 'diana', 'raiven'] 
 
 service = [
     {
@@ -16,7 +16,7 @@ service = [
         'time' : '19:30',
         'roles' : [
             {'role_name' : 'livestream', 'person' : 'bob'},
-            {'role_name' : 'camera', 'person' : 'aels'}
+            {'role_name' : 'camera', 'person' : 'jan'}
         ]
     }
 ]
