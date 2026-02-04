@@ -34,22 +34,42 @@ def create_service():
             name = str(input("Geef de service een naam: "))
             date = input("geef het een datum: ")
             time = input("en een tijd: ")
-                     
+            
+             
             service = {
                 'name' : name,
                 'date' : date,
                 'time' : time,
                 # add roles to service
                 'roles' : []
+                
             }
+            while True:
+                r_answer = str(input('Wilt u rollen toevoegen? (j/n): ')).lower()
+                if r_answer == 'j':
+                    role_name = input("geef role op: ")
+                    role_person = input("geef een persoon de rol: ")
+                    
+                    role = {
+                        'role_name' : role_name,
+                        'person': role_person
+                    }
+                    
+                   
+                    service['roles'].append(role)
 
-            services.append(service)
-            print(services)
-            
+                    
+                    # print(services)
+                    
+                elif r_answer == 'n':
+                    services.append(service)
+                    # print(services)
+                    break    
         elif answer == 'n':
-            print(services)
-            break    
-
+                    # print(services)
+                    break 
+            
+        
 def print_service():
     for index in services:
         print(f"{index['date']} - {index['name']} ({index['time']})")
