@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -8,13 +9,13 @@
 </head>
 <body>
     
-    <h1>Netflix - week 1</h1>
+    <h1>Netflix - week j1</h1>
     <section class="special">
             <image src="<?= $randomMovie["image"]?>" class="full-image"></image>
             <div class="full-image-text">
-                <h3>random movie titel</h3>
-                <p>random movie jaar</p>
-                <p>random movie genre</p>
+                <h3><?= $randomMovie["title"]?></h3>
+                <p><?= $randomMovie["year"]?></p>
+                <p><?= $randomMovie["genre"]?></p>
             </div>
     </section>
     <!-- een terugkerende rij -->
@@ -24,7 +25,7 @@
             
             <div class="movieitem">
                 <image src="image-url"></image>
-                <h3>film titel</h3>
+                <h3>film titesl</h3>
                 <p>film jaar</p>
                 <p>film genre</p>
             </div>

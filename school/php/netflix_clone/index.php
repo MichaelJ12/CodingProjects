@@ -1,13 +1,30 @@
 <?php
+include 'items.index.php';
+
+?>
+<?php
 
 function getRandomMovie()
 {
-    $GLOBALS['movies'];
-    $rand_movies = array_rand($movies, 3);
-    echo $movies[$rand_movies[0]];
-    echo $movies[$rand_movies[1]];
+    $t = $GLOBALS['movies'];
+    $rand_movies = array_rand($t, 1);
+    
+    return $t[$rand_movies];
 }
 
-function getMoviesByGenre($genre) {}
+
+$randomMovie = getRandomMovie();
+include 'view.index.php';
+
+function getMoviesByGenre($genre) {
+    $movies = $GLOBALS['movies'];
+
+    return array_filter($movies, function($movie) use ($genre) {
+        return str_contains($movie['genre'], $genre);
+    });
+
+}
+
+$genres = ['Adventure', 'Drama', 'Biography en Crime'];
 
 function getNewestMovies() {}
