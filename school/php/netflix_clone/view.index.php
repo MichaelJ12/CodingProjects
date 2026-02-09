@@ -35,7 +35,6 @@
                         <h3><?= $movie["title"] ?></h3>
                         <p><?= $movie["year"] ?></p>
                         <p><?= $movie["genre"] ?></p>
-
                     </div>
 
                 <?php endforeach; ?>
