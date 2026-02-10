@@ -1,0 +1,164 @@
+body{
+    margin: 0;
+    background-color: #111;
+    color: #FFF;
+    font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+    height: var(--scrollbar-width);
+    width: var(--scrollbar-width)
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background: transparent
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: #6c757d
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent
+}
+
+h1{
+    color: red;
+}
+
+a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a.selected{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.movierow{
+    margin: 0 20px;
+}
+
+.moviecontainer{
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+}
+
+a:not(:first-child) .movieitem{
+    margin-left: 20px;
+}
+
+
+.movieitem .image-container{
+    width: 13vw; 
+    height: 300px;  
+    
+}
+ 
+.movieitem img{
+    border-radius: 10px;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+ 
+.special{
+    min-height: 150px;
+    height: 50vh;
+    position: relative; 
+    overflow: hidden;
+}
+
+.full-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-image-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 19px black;
+    color: #FFF;
+    font-size: 2em;
+}
+
+.full-image-text>*{
+    margin: 0;
+}
+
+/*movie*/
+
+.single-movie-container img{
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.single-movie-container section.single-movie-image{
+    max-width: 100vw;
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+.single-movie-container .single-movie-info{
+    display: flex;
+    justify-content: center;
+}
+
+.single-movie-container a.button{
+    width: 400px;
+    height: 50px;
+    background: #ededed;
+    border-radius: 10px;
+    color: #000;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    transition: all 1s;
+    margin: 10px;
+}
+
+.single-movie-container a.button.not-fav{
+  
+    background: none;
+    border: 2px solid #FFF;
+    color: #FFF;
+}
+
+.single-movie-container a:hover.button{
+    background: #FFF;
+    color: #000;
+}
+
+.single-movie-container .button-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}

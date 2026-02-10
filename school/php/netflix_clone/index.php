@@ -1,6 +1,7 @@
 <?php
 require 'items.index.php';
 
+$newestMovies = getNewestMovies();
 
 function getRandomMovie()
 {
@@ -27,4 +28,20 @@ $genres = ['Adventure', 'Drama', 'Biography', 'Crime'];
 
 require 'view.index.php';
 
-function getNewestMovies() {}
+function getNewestMovies()
+{
+    $sortedMovies = $GLOBALS['movies'];
+
+    usort($sortedMovies, 'descYear');
+
+    $result = array_slice($sortedMovies, 0, 5);
+    return $result;
+}
+
+function descYear($a, $b)
+{
+    if ($a["year"] === $b["year"]) {
+        return 0;
+    }
+    return ($a["year"] > $b["year"]) ? -1 : 1;
+}

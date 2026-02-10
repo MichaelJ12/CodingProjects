@@ -19,6 +19,26 @@
             <p><?= $randomMovie["genre"] ?></p>
         </div>
     </section>
+
+    <section class="movierow">
+
+        <h2>Newest Movies</h2>
+        <div class="moviecontainer">
+
+            <?php foreach ($newestMovies as $new): ?>
+                <div class="movieitem">
+                    <image src="<?= $new["image"] ?>"></image>
+                    <h3><?= $new["title"] ?></h3>
+                    <p><?= $new["year"] ?></p>
+                    <p><?= $new["genre"] ?></p>
+                </div>
+
+            <?php endforeach; ?>
+
+
+        </div>
+    </section>
+
     <!-- een terugkerende rij -->
     <?php
     foreach ($genres as $genre):
