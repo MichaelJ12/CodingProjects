@@ -1,4 +1,17 @@
 <?php
+
+require "database/query/select.php";
+
+
+    $config = require('config.php');
+    $db = new Database($config['database']);
+
+    $t = $db->query($selectAllMovies)->fetchAll();
+    $genres = $db->query($selectMenuItems)->fetchAll();
+
+    
+    $GLOBALS['movies'] = $t;
+
     $randomMovie = getRandomMovie();
     $newestMovies = getNewestMovies();
 

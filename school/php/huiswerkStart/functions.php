@@ -25,3 +25,8 @@ function dd($value)
     echo '</pre>';
     die();
 }
+
+function getUrlParams($key){
+    return $_GET[$key];
+}
+

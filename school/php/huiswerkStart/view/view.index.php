@@ -1,4 +1,6 @@
-
+<?php   
+require("partial/head.php");
+require("partial/nav.php"); ?>
     <h1>Netflix - week 2</h1>
     <section class="special">
         <a href="movie?id=<?= $randomMovie["id"]?>">
@@ -14,7 +16,7 @@
 
     createMovieRow($newestMovies,"Nieuwste Films");
     foreach ($genres as $genre):
-        createMovieRow(getMoviesByGenre($genre), $genre);
+        createMovieRow(getMoviesByGenre($genre['menuitem']), $genre['menuitem']);
     endforeach; 
     
         
@@ -41,6 +43,7 @@
                     </a>
             <?php   endforeach; 
                 }
+                
             ?>
             </div>
         </section>
