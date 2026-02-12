@@ -17,6 +17,7 @@ $selectAllMovies =
 
 $selectMovie =
     "SELECT 
+        m.id,
         m.title, 
         m.year, 
         GROUP_CONCAT(g.genre ORDER BY g.genre SEPARATOR ', ') AS genre,

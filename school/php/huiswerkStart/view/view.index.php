@@ -3,7 +3,7 @@ require("partial/head.php");
 require("partial/nav.php"); ?>
     <h1>Netflix - week 2</h1>
     <section class="special">
-        <a href="movie?id=<?= $randomMovie["id"]?>">
+        <a href="movie?id=<?= $randomMovie["id"]?>&fav=<?= $randomMovie["fav"]?>">
             <figure class="image-container"><image src="<?= $randomMovie["image"]?>" class="full-image"></image></figure>
             <div class="full-image-text">
                 <h3><?= $randomMovie["title"]?></h3>
@@ -33,7 +33,7 @@ require("partial/nav.php"); ?>
 
                 }else{
                     foreach ($movieSelection as $movie):?>
-                    <a href="movie?id=<?= $movie["id"]?>">
+                    <a href="movie?id=<?= $movie["id"]?>&fav=<?= $movie["fav"]?>">
                         <div class="movieitem">
                             <figure class="image-container"><image src="<?= $movie["image"]?>"></image></figure>
                             <h3><?= $movie["title"]?></h3>

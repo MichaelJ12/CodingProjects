@@ -5,13 +5,20 @@
     // if urlparam is empty, look at movieitem (from database).
     // if url param is filled (there has been an update) use the variable $fav.
     // This because the view is loaded before de update is done (async).
-    // $isFavoriteDb = $movie["fav"] == 1; // from database
-    // $isFavoriteUrl = $fav;
-    // $isFavorite = isset($fav) ? $fav : $isFavoriteDb;
+    $isFavoriteDb = $movie["fav"] == 1; // from database
+    $isFavoriteUrl = $fav;
+    $isFavorite = isset($fav) ? (int)$fav : $isFavoriteDb;
 
-    $url;
-    $buttonClass; 
-    $buttonText;    
+    if ($isFavorite === 1){
+        $url = "/movie?id=" . $movie["id"] . "&fav=0";
+        $buttonClass = "";
+        $buttonText = "is favoriet";  
+    } else {
+        $url = "/movie?id=" . $movie["id"] . "&fav=1";
+        $buttonClass = "not-fav";
+        $buttonText = "maak favoriet";
+    }
+      
 
 ?>
     <div class="single-movie-container">
@@ -27,7 +34,7 @@
                 </div>
                 <div class="button-container">
                     <a class="button" href="#">bekijk film</a>
-                    <a class="button "  href="">favoriet</a>
+                    <a class="button <?=  $buttonClass ?> "  href="<?=  $url ?>"><?= $buttonText ?>  </a>
             </section>
     </div>
     
