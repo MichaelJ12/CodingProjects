@@ -6,15 +6,32 @@ require "database/query/select.php";
     $config = require('config.php');
     $db = new Database($config['database']);
 
-    $t = $db->query($selectAllMovies)->fetchAll();
+    $allmovies = $db->query($selectAllMovies)->fetchAll();
     $genres = $db->query($selectMenuItems)->fetchAll();
 
-    
-    $GLOBALS['movies'] = $t;
+    $GLOBALS['movies'] = $allmovies;
 
     $randomMovie = getRandomMovie();
     $newestMovies = getNewestMovies();
+    
+    $selectedGenre = getUrlParams("genre");
 
+    $searchQuery = getUrlParams("search");
+    
+    
+    function getSearchedMovie($searchQuery) {
+        if (!$searchQuery) {
+            return $GLOBALS["movies"];
+        }
+
+        $searchQuery = strtolower($searchQuery);
+        return array_filter($GLOBALS["movies"], function($movie) use ($searchQuery){
+            return str_contains(strtolower($movie["title"]), $searchQuery) || str_contains(strtolower($movie["genre"]), $searchQuery) || str_contains((string) $movie["year"], $searchQuery);
+        });
+    }
+
+    $searchResults = getSearchedMovie($searchQuery);
+    
     function getRandomMovie(){
         $key = array_rand($GLOBALS["movies"]);
     	$value = $GLOBALS["movies"][$key];
@@ -28,6 +45,15 @@ require "database/query/select.php";
         });
 
     }
+    
+    function getFavoriteMovies() {
+        return array_filter($GLOBALS["movies"], function($movie){
+            return $movie["fav"] == 1;
+        });
+
+    }
+
+    $favouriteMovies = getFavoriteMovies();
 
     function getNewestMovies(){
         $sortedMovies = $GLOBALS["movies"];

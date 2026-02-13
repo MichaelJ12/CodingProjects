@@ -2,6 +2,11 @@
 require("partial/head.php");
 require("partial/nav.php"); ?>
     <h1>Netflix - week 2</h1>
+    <form method="GET" action="/">
+        <input tpye="text" name="search" placeholder="zoek een film..." value="<?= $searchQuery ?>">
+        <button type="submit">Zoeken</button>
+    </form>
+
     <section class="special">
         <a href="movie?id=<?= $randomMovie["id"]?>&fav=<?= $randomMovie["fav"]?>">
             <figure class="image-container"><image src="<?= $randomMovie["image"]?>" class="full-image"></image></figure>
@@ -13,12 +18,18 @@ require("partial/nav.php"); ?>
         </a>
     </section>
     <?php
-
-    createMovieRow($newestMovies,"Nieuwste Films");
-    foreach ($genres as $genre):
-        createMovieRow(getMoviesByGenre($genre['menuitem']), $genre['menuitem']);
-    endforeach; 
-    
+   
+    if (isset($selectedGenre)) {
+            createMovieRow(getMoviesByGenre($selectedGenre), $selectedGenre);
+    } else if (!empty($searchQuery)) {
+        createMovieRow(getSearchedMovie($searchQuery), "Uitkomsten");
+    } else {
+        createMovieRow($favouriteMovies,"Favoriete Films");
+        createMovieRow($newestMovies,"Nieuwste Films");
+        foreach ($genres as $genre):
+            createMovieRow(getMoviesByGenre($genre['menuitem']), $genre['menuitem']);
+        endforeach;
+    }
         
 
     require("partial/footer.php");

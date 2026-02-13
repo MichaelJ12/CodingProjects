@@ -27,6 +27,6 @@ function dd($value)
 }
 
 function getUrlParams($key){
-    return $_GET[$key];
+    return $_GET[$key] ?? null;
 }
 

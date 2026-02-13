@@ -1,9 +1,10 @@
 <nav>
     <ul>
-        
-        <li><a href="/" class="selected">Home</a></li>   
+        <?php $homeclass = isset($selectedGenre) ? "not-selected" : "selected"; ?>
+        <li><a href="/" class="<?= $homeclass ?>">Home</a></li>   
         <?php foreach ($genres as $genre): ?>  
-            <li><a href="#" class="not-selected"><?= $genre['menuitem'] ?></a></li>
+            <?php $class = $selectedGenre === $genre['menuitem'] ? "selected" : "not-selected"; ?>
+            <li><a href="/?genre=<?= $genre['menuitem'] ?>" class="<?= $class ?>"><?= $genre['menuitem'] ?></a></li>
         <?php endforeach; ?>
     </ul>
 </nav>
