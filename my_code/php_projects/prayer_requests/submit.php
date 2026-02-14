@@ -1,4 +1,11 @@
 <?php
+require "database\query\insert.php";
+
+$config = require('config.php');
+$db = new Database($config['database']);
+
+$saveRequest = $db->query($insertRequest);
+
 
 $name = '';
 $email = '';
@@ -25,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($request)) {
         $errors[] = "Fill in prayer request";
     }
-
-    // Only set success if NO errors
+ 
     if (empty($errors)) {
+
         $success = true;
     }
 
@@ -55,7 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 echo "$error<br>";
 
             } 
-        } else if ($success === true) {
+        }
+        if ($success === true) {
             echo "het is gelukt";
         }
             
