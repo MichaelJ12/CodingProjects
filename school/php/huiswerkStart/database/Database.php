@@ -1,31 +1,34 @@
 <?php
-class Database {
+class Database
+{
     public $connection;
 
-    public function __destruct() {
+    public function __destruct()
+    {
         $this->connection = null;
     }
 
-    public function __construct($config, $username = 'root', $password = 'root') {
-        
+    public function __construct($config, $username = 'root', $password = '')
+    {
+
 
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 
 
- 
+
 
         $this->connection = new PDO($dsn, $username, $password, [
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC 
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]);
     }
-    
-    public function query($query, $params=[]) {
+
+    public function query($query, $params = [])
+    {
 
 
         $stmt = $this->connection->prepare($query);
         $stmt->execute($params);
 
         return $stmt;
-    } 
-
+    }
 }
